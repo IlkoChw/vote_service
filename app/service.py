@@ -41,7 +41,6 @@ class VoteService:
         if data is not None:
             return pickle.loads(data)
 
-    # :param rewrite: Флаг для перезаписи голосования с таким же идентификатором.
     def add(self, vote: Vote, rewrite: bool = True):
         """Метод для добавления нового голосования в хранилище.
 
