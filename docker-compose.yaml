@@ -1,0 +1,17 @@
+version: "3.3"
+   
+services:
+  redis:
+    image: redis:6.2.1-alpine
+    ports:
+      - 6379:6379
+
+  votes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/code
+    command: python main.py
+    depends_on:
+      - redis

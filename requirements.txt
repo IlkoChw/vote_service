@@ -1,0 +1,3 @@
+redis==4.3.5
+texttable==1.6.7
+
